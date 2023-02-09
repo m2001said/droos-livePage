@@ -66,7 +66,7 @@ a:focus {
   gap: 2rem;
   flex-wrap: wrap;
 }
-.live-btns .live-btn {
+.live-btn {
   /* width: 80%; */
   background: var(--color-white);
   border: none;
@@ -185,7 +185,7 @@ a:focus {
 /* --------media queries --------- */
 /**************************/
 @media (max-width: 704px) {
-  .live-btns .live-btn {
+  .live-btn {
     width: 100%;
   }
   .live-info-item {
@@ -208,6 +208,18 @@ a:focus {
     gap: 1rem;
   }
   .live-info-item-title {
-    margin-right: -60px;
+    margin-right: -25px;
+  }
+  .live-btn {
+    font-size: 1.2rem;
+  }
+  .live {
+    padding: 2rem 1.5rem;
+  }
+  .live-info {
+    padding: 1rem 5px 2rem 5px;
+  }
+  .live-info-item-name {
+    font-size: 1.1rem;
   }
 }
