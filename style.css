@@ -92,14 +92,18 @@ a:focus {
   background: var(--color-green);
   box-shadow: 3px 3px 0px 0px var(--color-green-dark);
 }
+
+.live-box {
+  max-width: 1200px;
+  width: 100%;
+}
 .live-info {
   background: var(--color-white);
   border: solid 2px var(--color-green);
   padding: 2rem;
-  max-width: 1200px;
   width: 100%;
   gap: 2rem;
-  /* overflow: hidden; */
+  /* display: none; */
 }
 .live-info-items {
   gap: 2rem;
@@ -154,7 +158,9 @@ a:focus {
   background: var(--color-white);
   border: solid 1px var(--color-green);
 }
-
+.live-previous {
+  margin-top: 2rem;
+}
 @keyframes movement {
   0% {
     transform: translateX(-100vw);
