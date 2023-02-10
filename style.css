@@ -259,6 +259,7 @@ a:focus {
   }
   .live-info-item-title {
     margin-right: -25px;
+    padding: 0.4rem 1.4rem 0.4rem 1rem;
   }
   .live-btn {
     font-size: 1.2rem;
@@ -278,5 +279,8 @@ a:focus {
   .live-share .live-question {
     width: 85%;
     text-align: center;
+  }
+  .live-info-item-title .bi {
+    font-size: 1.3rem;
   }
 }
