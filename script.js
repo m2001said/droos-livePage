@@ -61,12 +61,12 @@ closeModalButton.addEventListener("click", function () {
   shareModal.style.display = "none";
 });
 
-const link = window.location.href;
-
 // twitter
 const twitterShare = document.getElementById("twitter-share");
+
 twitterShare.addEventListener("click", function (event) {
   event.preventDefault();
+  const link = window.location.href;
   const url =
     "https://twitter.com/intent/tweet?text=" + encodeURIComponent(link);
   window.open(url, "Share to Twitter", "height=400,width=600");
@@ -75,6 +75,7 @@ twitterShare.addEventListener("click", function (event) {
 const facebookShare = document.getElementById("facebook-share");
 facebookShare.addEventListener("click", function (event) {
   event.preventDefault();
+  const link = window.location.href;
   const url =
     "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(link);
   window.open(url, "Share to Facebook", "height=400,width=600");
@@ -83,6 +84,7 @@ facebookShare.addEventListener("click", function (event) {
 const linkedinShare = document.getElementById("linkedin-share");
 linkedinShare.addEventListener("click", function (event) {
   event.preventDefault();
+  const link = window.location.href;
   const url =
     "https://www.linkedin.com/shareArticle?mini=true&url=" +
     encodeURIComponent(link);
