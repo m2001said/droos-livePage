@@ -25,12 +25,18 @@
 
       <!-- buttons -->
       <div class="live-btns flex">
-        <button class="live-btn">شبكات التواصل الاجتماعي د.محمد غيث</button>
-        <button class="live-btn">شرح بلوغ المرام د.عبدالله</button>
+        <button class="live-btn live-btn-1">
+          شبكات التواصل الاجتماعي د.محمد غيث
+        </button>
+        <button class="live-btn live-btn-2">شرح بلوغ المرام د.عبدالله</button>
+        <button class="live-btn live-btn-3">
+          محاضرة عن العلم واهميته الشيخ سعيد
+        </button>
       </div>
 
       <!-- live information -->
-      <div class="live-box">
+      <!-- for button 1 -->
+      <div class="live-box hidden" id="live-box-1">
         <div class="live-info flex-column">
           <div class="live-info-items flex-column">
             <!-- lecture -->
@@ -39,6 +45,132 @@
               <a href="/" class="live-info-item-name"
                 >شبكات التواصل الاجتماعي</a
               >
+            </div>
+
+            <!-- sheikh -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">المحاضـر</p>
+              <a href="/" class="live-info-item-name">د. عبدالله السيد محمد</a>
+            </div>
+
+            <!-- time -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">الميعـاد</p>
+              <p class="live-info-item-name">بعد العصر ، يوم 2-3-2023</p>
+            </div>
+
+            <!-- place -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">المكــان</p>
+              <a href="/" class="live-info-item-name"
+                >مسجد عباد الرحمن في دبي</a
+              >
+            </div>
+          </div>
+
+          <!-- audio -->
+
+          <audio class="live-audio" controls="" preload="none">
+            <source
+              src="https://sound.drosuae.com:6364/aziz.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+
+          <!-- new news -->
+          <div class="live-news">
+            <p>البث الصوتي والمرئي لا يعملان إلا وقت البث المباشر</p>
+          </div>
+
+          <!-- video -->
+          <iframe
+            class="live-video"
+            src="https://www.youtube.com/embed/Qyo-fsX2zx8"
+          >
+          </iframe>
+
+          <a class="live-question" href="#">لإرسال أي سؤال للشيخ</a>
+          <button class="live-question" id="share-button">مشاركة</button>
+
+          <div id="share-modal" class="flex-column">
+            <p>المشاركة عبر</p>
+            <a href="#" id="twitter-share">تويتر</a>
+            <a href="#" id="facebook-share">فيسبوك</a>
+            <a href="#" id="linkedin-share">لينكدان</a>
+            <button id="close-modal" class="live-question flex">x</button>
+          </div>
+        </div>
+
+        <!-- البث السابق -->
+        <div class="live-previous flex-column">
+          <h2 class="live-title">البث المباشر السابق</h2>
+          <div class="live-info flex-column">
+            <div class="live-info-items flex-column">
+              <!-- lecture -->
+              <div class="live-info-item flex">
+                <p class="live-info-item-title flex">المحاضرة</p>
+                <a href="/" class="live-info-item-name"
+                  >شبكات التواصل الاجتماعي</a
+                >
+              </div>
+
+              <!-- sheikh -->
+              <div class="live-info-item flex">
+                <p class="live-info-item-title flex">المحاضـر</p>
+                <a href="/" class="live-info-item-name"
+                  >د. عبدالله السيد محمد</a
+                >
+              </div>
+
+              <!-- time -->
+              <!-- <div class="live-info-item flex">
+                <p class="live-info-item-title flex">الميعـاد</p>
+                <p class="live-info-item-name">بعد العصر ، يوم 2-3-2023</p>
+              </div> -->
+
+              <!-- place -->
+              <!-- <div class="live-info-item flex">
+                <p class="live-info-item-title flex">المكــان</p>
+                <a href="/" class="live-info-item-name"
+                  >مسجد عباد الرحمن في دبي</a
+                >
+              </div> -->
+            </div>
+
+            <!-- audio -->
+
+            <audio class="live-audio" controls="" preload="none">
+              <source
+                src="https://sound.drosuae.com:6364/aziz.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+
+            <!-- new news -->
+            <!-- <div class="live-news">
+              <p>البث الصوتي والمرئي لا يعملان إلا وقت البث المباشر</p>
+            </div> -->
+
+            <!-- video -->
+            <iframe
+              class="live-video"
+              src="https://www.youtube.com/embed/Qyo-fsX2zx8"
+            >
+            </iframe>
+
+            <!-- <a class="live-question" href="#">لإرسال أي سؤال للشيخ</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- for button 2 -->
+      <div class="live-box hidden" id="live-box-2">
+        <div class="live-info flex-column">
+          <div class="live-info-items flex-column">
+            <!-- lecture -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">المحاضرة</p>
+              <a href="/" class="live-info-item-name">شرح بلوغ المرام</a>
             </div>
 
             <!-- sheikh -->
@@ -135,6 +267,125 @@
             <!-- <div class="live-news">
               <p>البث الصوتي والمرئي لا يعملان إلا وقت البث المباشر</p>
             </div> -->
+
+            <!-- video -->
+            <iframe
+              class="live-video"
+              src="https://www.youtube.com/embed/Qyo-fsX2zx8"
+            >
+            </iframe>
+
+            <!-- <a class="live-question" href="#">لإرسال أي سؤال للشيخ</a> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- for button 2 -->
+      <div class="live-box hidden" id="live-box-3">
+        <div class="live-info flex-column">
+          <div class="live-info-items flex-column">
+            <!-- lecture -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">المحاضرة</p>
+              <a href="/" class="live-info-item-name"
+                >محاضرة عن العلم واهميته الشيخ سعيد</a
+              >
+            </div>
+
+            <!-- sheikh -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">المحاضـر</p>
+              <a href="/" class="live-info-item-name">د. عبدالله السيد محمد</a>
+            </div>
+
+            <!-- time -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">الميعـاد</p>
+              <p class="live-info-item-name">بعد العصر ، يوم 2-3-2023</p>
+            </div>
+
+            <!-- place -->
+            <div class="live-info-item flex">
+              <p class="live-info-item-title flex">المكــان</p>
+              <a href="/" class="live-info-item-name"
+                >مسجد عباد الرحمن في دبي</a
+              >
+            </div>
+          </div>
+
+          <!-- audio -->
+
+          <audio class="live-audio" controls="" preload="none">
+            <source
+              src="https://sound.drosuae.com:6364/aziz.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+
+          <!-- new news -->
+          <div class="live-news">
+            <p>البث الصوتي والمرئي لا يعملان إلا وقت البث المباشر</p>
+          </div>
+
+          <!-- video -->
+          <iframe
+            class="live-video"
+            src="https://www.youtube.com/embed/Qyo-fsX2zx8"
+          >
+          </iframe>
+
+          <a class="live-question" href="#">لإرسال أي سؤال للشيخ</a>
+        </div>
+
+        <!-- البث السابق -->
+        <div class="live-previous flex-column">
+          <h2 class="live-title">البث المباشر السابق</h2>
+          <div class="live-info flex-column">
+            <div class="live-info-items flex-column">
+              <!-- lecture -->
+              <div class="live-info-item flex">
+                <p class="live-info-item-title flex">المحاضرة</p>
+                <a href="/" class="live-info-item-name"
+                  >شبكات التواصل الاجتماعي</a
+                >
+              </div>
+
+              <!-- sheikh -->
+              <div class="live-info-item flex">
+                <p class="live-info-item-title flex">المحاضـر</p>
+                <a href="/" class="live-info-item-name"
+                  >د. عبدالله السيد محمد</a
+                >
+              </div>
+
+              <!-- time -->
+              <!-- <div class="live-info-item flex">
+                  <p class="live-info-item-title flex">الميعـاد</p>
+                  <p class="live-info-item-name">بعد العصر ، يوم 2-3-2023</p>
+                </div> -->
+
+              <!-- place -->
+              <!-- <div class="live-info-item flex">
+                  <p class="live-info-item-title flex">المكــان</p>
+                  <a href="/" class="live-info-item-name"
+                    >مسجد عباد الرحمن في دبي</a
+                  >
+                </div> -->
+            </div>
+
+            <!-- audio -->
+
+            <audio class="live-audio" controls="" preload="none">
+              <source
+                src="https://sound.drosuae.com:6364/aziz.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+
+            <!-- new news -->
+            <!-- <div class="live-news">
+                <p>البث الصوتي والمرئي لا يعملان إلا وقت البث المباشر</p>
+              </div> -->
 
             <!-- video -->
             <iframe
