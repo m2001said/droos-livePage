@@ -49,83 +49,21 @@ if (hash) {
   }
 }
 // --------------------sharing buttons
-const shareButton = document.getElementById("share-button");
-const shareModal = document.getElementById("share-modal");
-const closeModalButton = document.getElementById("close-modal");
+const shareBtn = document.querySelector(".live-share-btn");
+const resultShare = document.querySelector(".live-share-result");
+const urlPage = window.location.href;
 
-shareButton.addEventListener("click", function () {
-  shareModal.style.display = "flex";
+const shareData = {
+  title: "MDN",
+  text: "Learn web development on MDN!",
+  url: window.location.href,
+};
+
+shareBtn.addEventListener("click", async () => {
+  try {
+    await navigator.share(shareDate);
+    resultShare.textContent = "تم المشاركة بنجاح";
+  } catch (err) {
+    resultShare.textContent = "نأسف لك لم تتم المشاركة بنجاح";
+  }
 });
-
-closeModalButton.addEventListener("click", function () {
-  shareModal.style.display = "none";
-});
-
-// twitter
-const twitterShare = document.getElementById("twitter-share");
-
-twitterShare.addEventListener("click", function (event) {
-  event.preventDefault();
-  const link = window.location.href;
-  const url =
-    "https://twitter.com/intent/tweet?text=" + encodeURIComponent(link);
-  window.open(url, "Share to Twitter", "height=400,width=600");
-});
-
-const facebookShare = document.getElementById("facebook-share");
-facebookShare.addEventListener("click", function (event) {
-  event.preventDefault();
-  const link = window.location.href;
-  const url =
-    "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(link);
-  window.open(url, "Share to Facebook", "height=400,width=600");
-});
-
-const linkedinShare = document.getElementById("linkedin-share");
-linkedinShare.addEventListener("click", function (event) {
-  event.preventDefault();
-  const link = window.location.href;
-  const url =
-    "https://www.linkedin.com/shareArticle?mini=true&url=" +
-    encodeURIComponent(link);
-
-  window.open(url, "Share to LinkedIn", "height=400,width=600");
-});
-
-// ------------
-// document.addEventListener("click", function (event) {
-//   if (shareModal.contains(event.target)) {
-//     shareModal.style.display = "none";
-//   }
-// });
-
-// const twitterShare = document.getElementById("twitter-share");
-// twitterShare.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   const url =
-//     "https://twitter.com/intent/tweet?text=" +
-//     encodeURIComponent("The text you want to share");
-//   window.open(url, "Share to Twitter", "height=400,width=600");
-// });
-
-// const facebookShare = document.getElementById("facebook-share");
-// facebookShare.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   const url =
-//     "https://www.facebook.com/sharer/sharer.php?u=" +
-//     encodeURIComponent("The URL you want to share");
-//   window.open(url, "Share to Facebook", "height=400,width=600");
-// });
-
-// const linkedinShare = document.getElementById("linkedin-share");
-// linkedinShare.addEventListener("click", function (event) {
-//   event.preventDefault();
-//   const url =
-//     "https://www.linkedin.com/shareArticle?mini=true&url=" +
-//     encodeURIComponent("The URL you want to share") +
-//     "&title=" +
-//     encodeURIComponent("The title you want to use") +
-//     "&summary=" +
-//     encodeURIComponent("The summary you want to use");
-//   window.open(url, "Share to LinkedIn", "height=400,width=600");
-// });
