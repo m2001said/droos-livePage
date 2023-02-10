@@ -54,14 +54,14 @@ const resultShare = document.querySelector(".live-share-result");
 const urlPage = window.location.href;
 
 const shareData = {
-  title: "MDN",
-  text: "Learn web development on MDN!",
-  url: window.location.href,
+  title: "موقع دروس الامارات",
+  text: "لقد أعجبني هذا الدرس فلعله ينفعكم ",
+  url: urlPage,
 };
 
 shareBtn.addEventListener("click", async () => {
   try {
-    await navigator.share(shareDate);
+    await navigator.share(shareData);
     resultShare.textContent = "تم المشاركة بنجاح";
   } catch (err) {
     resultShare.textContent = "نأسف لك لم تتم المشاركة بنجاح";
